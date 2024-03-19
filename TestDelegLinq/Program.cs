@@ -27,9 +27,15 @@ for(int i = 0; i < list.Count; i++ )
 }
 Console.WriteLine();
 PrintList(list);
+
+var newCollection = list.Where(x => x % 2 == 0).Select(x => x.ToString());
+
+foreach(var item in newCollection)
+{
+    Console.WriteLine(item + " ");
+}
+
 static int Square(int value) => value * value;
-
-
 static void PrintList(List<int> list)
 {
     
